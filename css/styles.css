@@ -51,6 +51,21 @@ p {
   display: block;
 }
 
+/* Transitions and animations */
+
+.link,
+.buttons,
+.projects-overlay {
+  transition-property: color, background-color, border, box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .transitions {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
 /* Hidden title */
 
 .visually-hidden {
@@ -674,9 +689,7 @@ p {
   font-size: 18px;
   line-height: 1.56;
   color: var(--primary-white-color);
-  /* text-align: center; */
 
   background-color: var(--bg-projects-overlay);
-
-  transform: translateY(-100%);
+  transform: translateY(100%);
 }
