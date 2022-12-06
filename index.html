@@ -57,7 +57,7 @@
       <section class="section hero-section overlay">
         <!-- <div class="container"> -->
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="buttons hero-button">Замовити послугу</button>
+        <button type="button" class="buttons hero-button" data-modal-open>Замовити послугу</button>
         <!-- </div> -->
       </section>
 
@@ -127,15 +127,15 @@
                 height="294"
                 class="images"
               />
-              <p class="profile-caption">Десктопні додатки</p>
+              <h3 class="profile-caption">Десктопні додатки</h3>
             </li>
             <li class="item">
               <img src="./images/img2.jpg" alt="Смартфон" width="370" height="294" class="images" />
-              <p class="profile-caption">Мобільні додатки</p>
+              <h3 class="profile-caption">Мобільні додатки</h3>
             </li>
             <li class="item">
               <img src="./images/img3.jpg" alt="Планшет" width="370" height="294" class="images" />
-              <p class="profile-caption">Дизайнерські рішення</p>
+              <h3 class="profile-caption">Дизайнерські рішення</h3>
             </li>
           </ul>
         </div>
@@ -436,17 +436,17 @@
     </footer>
 
     <!-- Модальне вікно -->
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close">
-          <svg class="icon">
-            <use href="./images/icons.svg"></use>
+        <button class="modal-close" data-modal-close>
+          <svg class="icon" width="11" height="11">
+            <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
       </div>
     </div>
 
     <!-- JS -->
-    <script></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
