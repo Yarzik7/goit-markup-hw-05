@@ -18,6 +18,7 @@
   --bg-backdrop: rgba(0, 0, 0, 0.2);
   --border-modal-close: rgba(0, 0, 0, 0.1);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
 }
 
 body {
@@ -59,8 +60,7 @@ p {
 .link,
 .buttons,
 .projects-overlay {
-  transition-property: color, background-color, border, box-shadow, transform;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
 }
 
@@ -119,6 +119,8 @@ p {
   background-color: var(--primary-white-color);
   border: 1px solid var(--border-modal-close);
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .modal-close .icon {
@@ -256,6 +258,8 @@ p {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--title-text-color);
+
+  transition-property: color;
 }
 
 .site-nav .link {
@@ -349,6 +353,7 @@ p {
   color: var(--primary-white-color);
 
   background-color: var(--bg-social-footer);
+  transition-property: background-color;
 }
 
 .footer-social .link:hover,
@@ -370,6 +375,8 @@ p {
   font-style: normal;
   text-decoration: none;
   color: var(--footer-contacts-color);
+
+  transition-property: color;
 }
 
 .link.geolink {
@@ -407,6 +414,7 @@ p {
 
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
 }
 
 .buttons.filter-buttons {
@@ -421,6 +429,7 @@ p {
   color: var(--title-text-color);
 
   background-color: var(--bg-buttons-color);
+  transition-property: color, background-color, box-shadow;
 }
 
 .buttons.hero-button:hover,
@@ -616,6 +625,7 @@ p {
 
 .team .link {
   color: var(--border-clients-color);
+  transition-property: color, background-color;
 }
 
 .team .link:hover,
@@ -645,6 +655,7 @@ p {
 
   border: 1px solid var(--border-clients-color);
   border-radius: 4px;
+  transition-property: color, border;
 }
 
 .clients .link:hover,
@@ -714,6 +725,7 @@ p {
   display: block;
 
   text-decoration: none;
+  transition-property: box-shadow;
 }
 
 .projects .link:hover,
@@ -736,6 +748,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(101%);
 
   width: 100%;
   height: 100%;
@@ -747,5 +760,5 @@ p {
   color: var(--primary-white-color);
 
   background-color: var(--bg-projects-overlay);
-  transform: translateY(101%);
+  transition-property: transform;
 }
